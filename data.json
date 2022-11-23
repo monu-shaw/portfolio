@@ -1,0 +1,87 @@
+[
+    [
+        {
+            "title":"Ricedaily.Ga",
+            "description":"Ricedaily.Ga is fully functional e-commerce website the modern technology are used during development of it. Make fully well optimized. The most hard part of this project designing UI because its Really Matter. <br> As this project solely developed by me. <br> Due to it's simple UI customer loving it.",
+            "link": "https://ricedaily.ga/"
+        },
+        {
+            "title":"React Portfolio Website",
+            "description":" Made a website during my internship at Nexenture with cool dark UI, Animation and Css in React. Hosted Over netlify.",
+            "link": "https://monuportfolio.netlify.app"
+        },
+        {
+            "title":"Paddy",
+            "description":"An Online Notepad For use To Copy All important notes. Specialy Design For Developer So Do not need to copy data on Every Devices. Chats are For Chatting Not For Copy and pasting. Try Today Paddy , Your Perfect Development Parnter. Hosted over Firebase.",
+            "link": "https://paddy-1cdf5.firebaseapp.com/"
+        },
+        {
+            "title":"Live Tv (MERN)",
+            "description":"Built A live Tv React App With React FrontEnd UI Framework powered By Express Api and MongoDB. Hosted Over Heroku.",
+            "link": "http://live-tv-react.herokuapp.com/"
+        },
+        {
+            "title":"RandomWallpaper",
+            "description":"A simple react beginner app. hosted over firebase.",
+            "link": "https://randomwallpaper-io.web.app"
+        },
+        {
+            "title":"OurPlay",
+            "description":"A website help you to watch youtube videos without Any Ad.",
+            "link": "http://ourplay.herokuapp.com/"
+        }
+    ],
+    [
+        {
+            "icon":"bi-linkedin",
+            "link":"https://www.linkedin.com/in/monu-shaw-b08484170"
+        },
+        {
+            "icon":"bi-github",
+            "link":"https://github.com/monu-shaw"
+        },
+        {
+            "icon":"bi-facebook",
+            "link":"https://www.facebook.com/monu.shaw.96558"
+        },
+        {
+            "icon":"bi-instagram",
+            "link":"https://www.instagram.com/monu_.shaw"
+        }
+    ],
+    [
+        {
+            "title":"HTML 85%",
+            "experience":"85"
+        },
+        {
+            "title":"Javascript 90%",
+            "experience":"90"
+        },
+        {
+            "title":"JQuery 85%",
+            "experience":"85"
+        },
+        {
+            "title":"CSS 65%",
+            "experience":"65"
+        },
+        {
+            "title":"PHP 80%",
+            "experience":"80"
+        },
+        {
+            "title":"ReactJS 85%",
+            "experience":"85"
+        },
+        {
+            "title":"MySQL 75%",
+            "experience":"70"
+        },
+        {
+            "title":"MongoDB 70%",
+            "experience":"70"
+        }
+    ]
+    
+]

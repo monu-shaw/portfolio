@@ -163,3 +163,39 @@ a.text-mute:hover{
 .bg-i{
     background-image: url(../image/bg2.jpg);
 }
+fadeIn{
+    animation: fadeIn 2s ;
+    animation-timing-function: ease;
+}
+fadeOut{
+    animation: fadeOut 2s ;
+    animation-timing-function: ease;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0.75;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 0.75;
+    }
+    25%{
+        opacity: 0.50;
+    }
+    50%{
+        opacity: 0.25;
+    }
+    100%{
+        opacity: 0.1;
+    }
+}

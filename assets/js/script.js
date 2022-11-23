@@ -7,7 +7,7 @@
                 <a href="${a.link}" target="_blank" class="text-decoration-none text-c-warning popSemi">View > </a>
               </div>
             `,""),u("bio-link").innerHTML=a[1].reduce((c,a)=>c+=`
-        <a href="${a.link}" class="text-decration-none text-mute col text-center"><i class="bi ${a.icon}"></i></a>
+        <a href="${a.link}" target="_blank" class="text-decration-none text-mute col text-center"><i class="bi ${a.icon}"></i></a>
             `,""),u("ex").innerHTML=a[2].reduce((c,a)=>c+=`
             <div class="progress my-1">
               <div class="progress-bar bg-c-warning text-start popSemi px-2" role="progressbar" aria-label="Example with label" style="width: 00%;" aria-valuenow="${a.experience}" aria-valuemin="0" aria-valuemax="100">${a.title}</div>

@@ -34,6 +34,16 @@
             "title":"Live Tv (Angular)",
             "description":"Built A live Tv Angular App With Tailwind powered By Supabase a firebase alternative . Hosted Over Vercel.",
             "link": "https://ourtv2.vercel.app"
+        },
+        {
+            "title":"Link Previewer (NextJs)",
+            "description":"Build A simple Link Previewer Using mine Custom build npm package (monu-linkpreview) . Used the puppeteer for Web scraping.",
+            "link": "https://linkpreview-alpha.vercel.app/"
+        },
+        {
+            "title":"Link Info Scrapper (NPM Package)",
+            "description":"A npm package for url meta information extracting Made With pupeteer and cherio. Exclusive made for Findcoder.io Challenge",
+            "link": "https://www.npmjs.com/package/monu-linkpreview"
         }
     ],
     [

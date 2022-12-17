@@ -7,18 +7,13 @@
         },
         {
             "title":"React Portfolio Website",
-            "description":" Made a website during my internship at Nexenture with cool dark UI, Animation and Css in React. Hosted Over netlify.",
+            "description":"Made a website during my internship at Nexenture with cool dark UI, Animation and Css in React. Hosted Over netlify.",
             "link": "https://monuportfolio.netlify.app"
         },
         {
             "title":"Paddy",
             "description":"An Online Notepad For use To Copy All important notes. Specialy Design For Developer So Do not need to copy data on Every Devices. Chats are For Chatting Not For Copy and pasting. Try Today Paddy , Your Perfect Development Parnter. Hosted over Firebase.",
             "link": "https://paddy-1cdf5.firebaseapp.com/"
-        },
-        {
-            "title":"Live Tv (MERN)",
-            "description":"Built A live Tv React App With React FrontEnd UI Framework powered By Express Api and MongoDB. Hosted Over Heroku.",
-            "link": "http://live-tv-react.herokuapp.com/"
         },
         {
             "title":"RandomWallpaper",
@@ -29,6 +24,16 @@
             "title":"OurPlay",
             "description":"A website help you to watch youtube videos without Any Ad.",
             "link": "http://ourplay.herokuapp.com/"
+        },
+        {
+            "title":"Live Tv (NextJs)",
+            "description":"Built A live Tv React App With NextJs FrontEnd UI Framework powered By Supabase a firebase alternative . Hosted Over Vercel.",
+            "link": "https://ourtv.vercel.app"
+        },
+        {
+            "title":"Live Tv (Angular)",
+            "description":"Built A live Tv Angular App With Tailwind powered By Supabase a firebase alternative . Hosted Over Vercel.",
+            "link": "https://ourtv2.vercel.app"
         }
     ],
     [

@@ -10,6 +10,11 @@
             "description":"Made a website during my internship at Nexenture with cool dark UI, Animation and Css in React. Hosted Over netlify.",
             "link": "https://monuportfolio.netlify.app"
         },
+{
+            "title":"E-commerce (NextJs)",
+            "description":"Builded A simple App E-commerce App With Next.js. used Next.Js api Module , MongoDB in backend and Bootstrap. Also Added Ready To Use RazorPay PG.",
+            "link": "https://e-comm-lilac.vercel.app"
+        },
         {
             "title":"Paddy",
             "description":"An Online Notepad For use To Copy All important notes. Specialy Design For Developer So Do not need to copy data on Every Devices. Chats are For Chatting Not For Copy and pasting. Try Today Paddy , Your Perfect Development Parnter. Hosted over Firebase.",

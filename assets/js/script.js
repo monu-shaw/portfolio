@@ -49,7 +49,7 @@ const loadProject = (a) => {
   (u("project").innerHTML = a[0].reduce(
     (c, a) =>
       (c += `
-              <div class="bg-c-gray3 col-11 col-md-3 mx-auto p-2 rounded-3 hvr-card">
+              <div class="bg-c-gray3 col-11 col-md-4 mx-auto p-2 rounded-3 hvr-card c-screenBreakPoint">
                 <h6 class="text-light">${a.title}</h6>
                 <p class="text-c-grey c-fs-12 popLight fw-lighter text-capitalize">
                   ${a.description}

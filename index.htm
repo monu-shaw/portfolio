@@ -20,6 +20,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
     />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/5.0.1/smooth-scrollbar.css"
+      integrity="sha512-QyDQGQiuKrcAtAIPIaO+IBZNkmb/+U5dyMY2Qe64mhjKiF74QWuDhjrqgkbacfQqqFB2+fwWnan5TQHlb0mfUg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
   </head>
   <body onresize="res()" class="bg-c-primary">
     <div
@@ -33,6 +40,7 @@
         </div>
       </div>
     </div>
+
     <section class="d-none" id="sec">
       <div class="row m-0 position-relative">
         <div
@@ -133,119 +141,129 @@
           class="position-absolute top-0 end-0 col-12 col-md-9 p-3 bg-c-gray2 overflow-auto hide-scrollbar bg-i"
           style="max-height: 100vh"
         >
-          <div class="d-md-none bg-c-primary py-1">
-            <i
-              class="bi bi-three-dots-vertical text-c-grey p-2"
-              id="sOpen"
-              onclick="sidebar()"
-            ></i>
-          </div>
-          <div
-            class="position-relative bg-c-primary d-flex justify-centent-center align-items-center p-1 text-light overflow-hidden"
-            style="height: 40vh"
-          >
-            <div class="bg-c-primary">
-              <img
-                src="./assets/image/bg.jpg"
-                class="c-img"
-                width="100%"
-                alt=""
-                srcset=""
-              />
-            </div>
-            <div class="row position-absolute" style="top: 20%">
-              <div class="col-11 col-md-6 col-lg-9 mx-auto">
-                <h2 class="popSemi fs-1 px-2 ps-3 mb-5">
-                  Discover My Amazing <br />
-                  Art Space
-                </h2>
-                <!-- <p id="textin" class="text-c-warning px-2 ps-3 mb-5 popLight">&lt;code&gt; <span class="text-light"> I Build <span id="textIn"></span></span> &lt;code&gt; </p> -->
+          <scrollbar id="my-scrollbar" >
+            <div class="scroll-content">
+              <div class="d-md-none bg-c-primary py-1">
+                <i
+                  class="bi bi-three-dots-vertical text-c-grey p-2"
+                  id="sOpen"
+                  onclick="sidebar()"
+                ></i>
               </div>
-              <div class="col-8 col-md-5 col-lg-3 mx-auto">
-                <img
-                  src="./u3.png"
-                  width="100%"
-                  alt=""
-                  style="transform: translateY(-55px); opacity: 0.8"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="row justify-content-between text-center text-light px-2 col-12 col-md-10 col-lg-8 mx-auto my-2"
-          >
-            <p class="popThin col-11 col-md-4 mx-auto fw-semibold">
-              <span class="text-c-warning">2+</span> Experience
-            </p>
-            <p class="popThin col-11 col-md-4 mx-auto fw-semibold">
-              <span class="text-c-warning">10+</span> Projects
-            </p>
-            <p class="popThin col-11 col-md-4 mx-auto fw-semibold">
-              <span class="text-c-warning">4+</span> Languages
-            </p>
-          </div>
-          <div class="text-light">
-            <h5 class="popLight">My Projects</h5>
-            <div
-              class="d-flex flex-wrap justify-centent-between gap-1 project"
-              id="project"
-            >
-              <div class="d-flex justify-content-center mx-auto">
-                <div class="spinner-border text-c-warning" role="status">
-                  <span class="visually-hidden">Loading...</span>
+              <div
+                class="position-relative bg-c-primary d-flex justify-centent-center align-items-center p-1 text-light overflow-hidden"
+                style="height: 40vh"
+              >
+                <div class="bg-c-primary">
+                  <img
+                    src="./assets/image/bg.jpg"
+                    class="c-img"
+                    width="100%"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <div class="row position-absolute" style="top: 20%">
+                  <div class="col-11 col-md-6 col-lg-9 mx-auto">
+                    <h2 class="popSemi fs-1 px-2 ps-3 mb-5">
+                      Discover My Amazing <br />
+                      Art Space
+                    </h2>
+                    <!-- <p id="textin" class="text-c-warning px-2 ps-3 mb-5 popLight">&lt;code&gt; <span class="text-light"> I Build <span id="textIn"></span></span> &lt;code&gt; </p> -->
+                  </div>
+                  <div class="col-8 col-md-5 col-lg-3 mx-auto">
+                    <img
+                      src="./u3.png"
+                      width="100%"
+                      alt=""
+                      style="transform: translateY(-55px); opacity: 0.8"
+                    />
+                  </div>
                 </div>
               </div>
-              <!-- <div class="bg-c-gray3 col-11 col-md-3 mx-auto p-2"> <h6 class="text-light">Ricedaily.Ga</h6> <p class="text-c-grey c-fs-12 popLight fw-lighter"> Ricedaily.Ga is fully functional e-commerce website the modern technology are used during development of it. Make fully well optimized. The most hard part of this project designing UI because its Really Matter. <br> As this project solely developed by me. <br> Due to it's simple UI customer loving it. </p> <a href="http://ricedaily.ga/" target="_blank" class="text-decoration-none text-c-warning popSemi">View > </a> </div> -->
-            </div>
-          </div>
-          <div class="text-light">
-            <h5 class="popLight mt-2">My Education</h5>
-            <div
-              class="d-flex flex-wrap justify-centent-start gap-1 col-12 col-md-8"
-            >
-              <div class="bg-c-gray3 col-5 mx-auto p-2 rounded-3 hvr-card">
-                <h6 class="text-light">G.B Memoial Institution</h6>
-                <p class="text-c-grey c-fs-12 popLight fw-lighter">
-                  Completed Secondary and Higher Secondary <br />
+              <div
+                class="row justify-content-between text-center text-light px-2 col-12 col-md-10 col-lg-8 mx-auto my-2"
+              >
+                <p class="popThin col-11 col-md-4 mx-auto fw-semibold">
+                  <span class="text-c-warning">2+</span> Experience
                 </p>
-                <p class="text-c-warning popSemi">In 2020</p>
-              </div>
-              <div class="bg-c-gray3 col-5 mx-auto p-2 rounded-3 hvr-card">
-                <h6 class="text-light">IGNOU</h6>
-                <p class="text-c-grey c-fs-12 popLight fw-lighter">
-                  Pursuing Bachelors's in Computer Application<br />
+                <p class="popThin col-11 col-md-4 mx-auto fw-semibold">
+                  <span class="text-c-warning">10+</span> Projects
                 </p>
-                <p class="text-c-warning popSemi">2021 - 2023</p>
+                <p class="popThin col-11 col-md-4 mx-auto fw-semibold">
+                  <span class="text-c-warning">4+</span> Languages
+                </p>
               </div>
-            </div>
-            <div>
-              <div class="github-card">
-                <h5 class="popLight mt-2">My Github</h5>
-                <div class="row col-12">
-                  <div class="col-12 col-md-6">
-                    <img
-                      width="100%"
-                      src="https://github-readme-stats.vercel.app/api?username=monu-shaw&show_icons=true&count_private=true&theme=darcula&hide_border=true&hide=issues,contribs&bg_color=00000000"
-                    />
+              <div class="text-light">
+                <h5 class="popLight">My Projects</h5>
+                <div
+                  class="d-flex flex-wrap justify-centent-between rg project"
+                  id="project"
+                >
+                  <div class="d-flex justify-content-center mx-auto">
+                    <div class="spinner-border text-c-warning" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
                   </div>
-                  <div class="col-12 col-md-6">
-                    <img
-                      width="100%"
-                      src="https://github-readme-stats.vercel.app/api/top-langs/?username=monu-shaw&layout=compact&hide_border=true&theme=darcula&bg_color=00000000"
-                    />
+                  <!-- <div class="bg-c-gray3 col-11 col-md-3 mx-auto p-2"> <h6 class="text-light">Ricedaily.Ga</h6> <p class="text-c-grey c-fs-12 popLight fw-lighter"> Ricedaily.Ga is fully functional e-commerce website the modern technology are used during development of it. Make fully well optimized. The most hard part of this project designing UI because its Really Matter. <br> As this project solely developed by me. <br> Due to it's simple UI customer loving it. </p> <a href="http://ricedaily.ga/" target="_blank" class="text-decoration-none text-c-warning popSemi">View > </a> </div> -->
+                </div>
+              </div>
+              <div class="text-light">
+                <h5 class="popLight mt-2">My Education</h5>
+                <div
+                  class="d-flex flex-wrap justify-centent-start gap-1 col-12 col-md-8"
+                >
+                  <div class="bg-c-gray3 col-5 mx-auto p-2 rounded-3 hvr-card">
+                    <h6 class="text-light">G.B Memoial Institution</h6>
+                    <p class="text-c-grey c-fs-12 popLight fw-lighter">
+                      Completed Secondary and Higher Secondary <br />
+                    </p>
+                    <p class="text-c-warning popSemi">In 2020</p>
                   </div>
-                  <div class="mx-auto col-12 col-md-9 col-lg-7">
-                    <img
-                      width="100%"
-                      src="https://github-readme-streak-stats.herokuapp.com?user=monu-shaw&theme=darcula&hide_border=true&background=FFFFFF00"
-                    />
+                  <div class="bg-c-gray3 col-5 mx-auto p-2 rounded-3 hvr-card">
+                    <h6 class="text-light">IGNOU</h6>
+                    <p class="text-c-grey c-fs-12 popLight fw-lighter">
+                      Pursuing Bachelors's in Computer Application<br />
+                    </p>
+                    <p class="text-c-warning popSemi">2021 - 2023</p>
                   </div>
-                  <br />
-                  <br />
+                </div>
+                <div>
+                  <div class="github-card">
+                    <h5 class="popLight mt-2">My Github</h5>
+                    <div class="row col-12">
+                      <div class="col-12 col-md-6">
+                        <img
+                          width="100%"
+                          src="https://github-readme-stats.vercel.app/api?username=monu-shaw&show_icons=true&count_private=true&theme=darcula&hide_border=true&hide=issues,contribs&bg_color=00000000"
+                        />
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <img
+                          width="100%"
+                          src="https://github-readme-stats.vercel.app/api/top-langs/?username=monu-shaw&layout=compact&hide_border=true&theme=darcula&bg_color=00000000"
+                        />
+                      </div>
+                      <div class="mx-auto col-12 col-md-9 col-lg-7">
+                        <img
+                          width="100%"
+                          src="https://github-readme-streak-stats.herokuapp.com?user=monu-shaw&theme=darcula&hide_border=true&background=FFFFFF00"
+                        />
+                      </div>
+                      <br />
+                      <br />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+            <div class="scrollbar-track scrollbar-track-x">
+              <div class="scrollbar-thumb scrollbar-thumb-x"></div>
+            </div>
+            <div class="scrollbar-track scrollbar-track-y">
+              <div class="scrollbar-thumb scrollbar-thumb-y"></div>
+            </div>
+          </scrollbar>
         </div>
       </div>
     </section>
@@ -260,6 +278,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.1/smooth-scrollbar.min.js" integrity="sha512-DmxN+h4rvEbHxmkzhxEA1krRvgdzSFhjkcTe2HCZpd5ZnxP9+OWGHB8iMUQhvidmrivCTe3g0hyeMpfTLIwf7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.1/plugins/overscroll.min.js" integrity="sha512-c5xXf0X4/GgcRwau3AiNk3tTIE81A0650rf1EO4l7MmTbEDTU1/4emiXhlRKt689a8iYhi8O0PTYWXTg9+nlcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/script.js"></script>
     <script>
       $(document).ready(function () {
@@ -275,6 +295,14 @@
             })
             .catch((er) => console.log(`err : ${er}`));
         }, 500);
+      });
+      var Scrollbar = window.Scrollbar;
+      Scrollbar.use(window.OverscrollPlugin)
+      Scrollbar.init(document.querySelector("#my-scrollbar"), {
+        damping: 0.04,
+        thumMinSize: 18,
+        renderByPixels: true,
+        alwaysShowTracks: false,
       });
     </script>
   </body>

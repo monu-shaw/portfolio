@@ -54,6 +54,11 @@
             "title":"OurRecorder",
             "description":"A ScreenRecorder Made With VanillaJs With Quality Controls",
             "link": "https://monu-shaw.github.io/ourrecorder/screenrecord.htm"
+        },
+        {
+            "title":"SQL Code Generator",
+            "description":"Genrate Sql With Just Senteces Powered by Open AI",
+            "link": "https://sqlgenerator.vercel.app/"
         }
     ],
     [

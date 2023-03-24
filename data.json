@@ -59,6 +59,11 @@
             "title":"SQL Code Generator",
             "description":"Genrate Sql With Just Senteces Powered by Open AI",
             "link": "https://sqlgenerator.vercel.app/"
+        }, 
+        {
+            "title":"Ricedaily (React) ",
+            "description":"Rebuild the ricedaily E-commerce website in React improved UI backend powered with PHP APIs",
+            "link": "https://mycts.ga/"
         }
     ],
     [

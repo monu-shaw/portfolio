@@ -62,7 +62,7 @@ const loadProject = (a) => {
             `),
     ""
   );
-  (u("project").innerHTML = short+`<div class="col-10 col-md-6 col-lg-4 mx-auto my-2"><button class="btn btn-outline-warning rounded-pill w-100" onclick="showAll()">Show More </button></div>`),
+  (u("project").innerHTML = short+`<div class="col-10 col-md-6 col-lg-4 mx-auto my-2"><button class="btn btn-outline-warning rounded-pill w-100 smore" onclick="showAll()">Show More </button></div>`),
     (u("bio-link").innerHTML = a[1].reduce(
       (c, a) =>
         (c += `
@@ -116,5 +116,5 @@ const showLess =()=>{
             `),
     ""
   );
-  u("project").innerHTML = short+`<div class="col-10 col-md-6 col-lg-4 mx-auto my-2"><button class="btn btn-outline-warning rounded-pill w-100" onclick="showAll()">Show More </button></div>`
+  u("project").innerHTML = short+`<div class="col-10 col-md-6 col-lg-4 mx-auto my-2"><button class="btn btn-outline-warning rounded-pill w-100 smore" onclick="showAll()">Show More </button></div>`
 }

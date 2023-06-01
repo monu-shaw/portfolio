@@ -224,3 +224,14 @@ fadeOut {
     max-width: 100% !important;
   }
 }
+
+.smore{
+  transition: all 1s !important;
+}
+
+.grow{
+  transition: all 1s !important;
+}
+.grow:hover{
+  font-size: 50px !important;
+}

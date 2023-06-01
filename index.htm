@@ -20,13 +20,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/5.0.1/smooth-scrollbar.css"
-      integrity="sha512-QyDQGQiuKrcAtAIPIaO+IBZNkmb/+U5dyMY2Qe64mhjKiF74QWuDhjrqgkbacfQqqFB2+fwWnan5TQHlb0mfUg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
   </head>
   <body onresize="res()" class="bg-c-primary">
     <div
@@ -103,7 +96,7 @@
               <div>
                 <p class="popThin c-fs-12">
                   <i class="bi bi-check2 text-c-warning"></i> Bootsrtap,
-                  TailWind
+                  TailWind, AntDesign
                 </p>
                 <p class="popThin c-fs-12">
                   <i class="bi bi-check2 text-c-warning"></i> Git, Node.JS
@@ -263,8 +256,31 @@
             </div>
           </scrollbar>
         </div>
+
+        <div class="position-absolute bottom-0 end-0 pe-5">
+          <button class="rounded-circle p-2 btn" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="bi bi-whatsapp"></i></button>
+        </div>
       </div>
     </section>
+
+    <!-- Modals -->
+    <div class="modal fade" id="contactModal"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Contact</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSct1mXUsMkZfzECqe_67easoiUb6JxLSacWqGd9nMu1G0y4jQ/viewform?embedded=true" width="640" height="824" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modals -->
     <script
       src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
       integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="

@@ -50,7 +50,7 @@ const loadProject = (a) => {
   let short = a[0].slice(0,6).reduce(
     (c, a) =>
       (c += `
-            <div class="col-11 col-md-4 p-2 mx-auto">
+            <div class="col-11 col-md-4 col-lg-3 p-2">
               <div class="bg-c-gray3 p-2 rounded-3 hvr-card c-screenBreakPoint">
                 <h6 class="text-light">${a.title}</h6>
                 <p class="text-c-grey c-fs-12 popLight fw-lighter text-capitalize">
@@ -62,7 +62,7 @@ const loadProject = (a) => {
             `),
     ""
   );
-  (u("project").innerHTML = short+`<div class="col-10 col-md-6 col-lg-4 mx-auto my-2"><button class="btn btn-outline-warning rounded-pill w-100 smore" onclick="showAll()">Show More </button></div>`),
+  (u("project").innerHTML = short+`<div class="col-10 mx-auto my-2"><div class="col-10 col-md-6 col-lg-4 mx-auto"><button class="btn btn-outline-warning rounded-pill w-100 smore" onclick="showAll()">Show More </button></div></div>`),
     (u("bio-link").innerHTML = a[1].reduce(
       (c, a) =>
         (c += `
@@ -86,10 +86,10 @@ const showAll =()=>{
   let short = data.reduce(
     (c, a) =>
       (c += `
-            <div class="col-11 col-md-4 p-2 mx-auto">
+            <div class="col-11 col-md-4 col-lg-3 p-2">
               <div class="bg-c-gray3 p-2 rounded-3 hvr-card c-screenBreakPoint">
                 <h6 class="text-light">${a.title}</h6>
-                <p class="text-c-grey c-fs-12 popLight fw-lighter text-capitalize">
+                <p class="text-c-grey c-fs-12 popLight fw-bolder text-capitalize">
                   ${a.description}
                 </p>
                 <a href="${a.link}" target="_blank" class="text-decoration-none text-c-warning popSemi">View > </a>

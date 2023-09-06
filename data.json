@@ -28,7 +28,7 @@
         {
             "title":"OurPlay",
             "description":"A website help you to watch youtube videos without Any Ad.",
-            "link": "https://shaw101ways.ga/"
+            "link": "http://ourplay.infinityfreeapp.com/"
         },
         {
             "title":"Live Tv (NextJs)",
@@ -63,7 +63,7 @@
         {
             "title":"Ricedaily (React) ",
             "description":"Rebuild the ricedaily E-commerce website in React improved UI backend powered with PHP APIs",
-            "link": "https://mycts.ga/"
+            "link": "http://mycts.lovestoblog.com/"
         }
     ],
     [
@@ -87,39 +87,43 @@
     [
         {
             "title":"HTML 85%",
-            "experience":"85"
+            "experience":85
         },
         {
             "title":"Javascript 90%",
-            "experience":"90"
+            "experience":90
         },
         {
             "title":"JQuery 85%",
-            "experience":"85"
+            "experience":85
         },
         {
             "title":"CSS 65%",
-            "experience":"65"
+            "experience":65
         },
         {
             "title":"PHP 80%",
-            "experience":"80"
+            "experience":80
         },
         {
             "title":"ReactJS 85%",
-            "experience":"85"
+            "experience":85
         },
-{
+        {
             "title":"Angular 70%",
-            "experience":"70"
+            "experience":70
         },
         {
             "title":"MySQL 75%",
-            "experience":"70"
+            "experience":70
         },
         {
             "title":"MongoDB 70%",
-            "experience":"70"
+            "experience":70
+        },
+        {
+            "title":"DSA 60%",
+            "experience":60
         }
     ]
     

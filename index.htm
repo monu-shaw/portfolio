@@ -34,6 +34,7 @@
 
     <section class="d-none" id="sec">
       <div class="row m-0 position-relative">
+        <!-- SideBar -->
         <div
           id="main"
           class="d-none d-md-block col-12 col-md-3 p-0 e"
@@ -43,15 +44,16 @@
             id="sub-main"
             class="col-8 col-md-12 bg-c-primary e overflow-hidden"
           >
-            <div class="bg-c-primary m-0" style="height: 32vh">
+            <div class="bg-c-primary m-0" >
               <div
-                class="d-flex justify-centent-center flex-column align-items-center position-relative"
+                class="d-flex justify-centent-center flex-column align-items-center position-relative py-5"
               >
                 <i
                   class="d-block d-md-none bi bi-three-dots-vertical text-c-grey p-2 position-absolute end-0 e"
                   id="sClose"
                   onclick="sidebarClose()"
                 ></i>
+
                 <div
                   class="overflow-hidden bg-info rounded-circle mt-2 pb-2"
                   style="width: 95px; height: 95px"
@@ -73,8 +75,8 @@
               </div>
             </div>
             <div
-              class="bg-c-secondary m-0 text-light px-3 py-2 overflow-auto hide-scrollbar popLight"
-              style="max-height: 60vh"
+              class="bg-c-secondary m-0 text-light px-3 py-3 overflow-auto hide-scrollbar popLight"
+              style="max-height: 75vh"
             >
               <div class="d-flex justify-content-between c-fs-12 c-lh-1">
                 <p>Residence:</p>
@@ -121,13 +123,15 @@
             </div>
             <div
               class="side-footer d-flex justify-centent-center py-2"
-              style="height: 8vh"
+              style="height: 8vh;max-height: 50px"
               id="bio-link"
             >
               <!-- <a href="" class="text-decration-none text-mute col text-center"><i class="bi bi-linkedin"></i></a> -->
             </div>
           </div>
         </div>
+        <!-- SideBar -->
+        
         <div
           class="position-absolute top-0 end-0 col-12 col-md-9 p-3 bg-c-gray2 overflow-auto hide-scrollbar bg-i"
           style="max-height: 100vh"
@@ -257,12 +261,53 @@
           </scrollbar>
         </div>
 
-        <div class="position-absolute bottom-0 end-0 d-flex flex-row-reverse">
-          <button class="rounded-circle btn text-warning " style="z-index: 4000;" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="grow bi bi-whatsapp fs-2"></i></button>
+        <div class="position-absolute bottom-0 end-0 pt-5 d-flex flex-row-reverse" style="z-index: 2;">
+          <button class="rounded-circle btn text-warning " style="z-index: 4;" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="grow bi bi-whatsapp fs-2"></i></button>
         </div>
+
+        <!-- Weather Card -->
+        <div class="container-cust d-none" id="custCard">
+          <div class="upper" id="upper">
+            <div class="u-left">
+              <div class="weather-stat-logo-container">
+                <img id="weatherIcon" src="./assets/image/weather/sunny.svg" />
+              </div>
+            </div>
+            <div class="u-right">
+              <div class="weather-stat position-relative">
+                <div class="px-2 py-1 fw-semibold rounded-circle position-absolute text-light border border-1 border-light" style="top: -20px;background-color: #2d2d39b3;" onclick="closeWeather()">X</div>
+                <ul>
+                  <li id="mainWeather">Sunny</li>
+                  <li><span style="font-size: 40px;" id="temp">20°C</span></li>
+                  <li id="location">Kolkata,West Bengal</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="lower">
+            <div class="l-left">
+              <ul>
+                <li>Wind</li>
+                <li>Humidity</li>
+                <li>Pressure</li>
+              </ul>
+            </div>
+            <div class="l-right">
+              <ul>
+                <li id="speed">100kmph</li>
+                <li id="humidity">40%</li>
+                <li id="pressure">30.33in</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Weather Card -->
       </div>
     </section>
-
+    <div class="alert alert-dismissible fade" role="alert">
+      <div id="alertMessage"></div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     <!-- Modals -->
     <div class="modal fade modal-lg" id="contactModal"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">

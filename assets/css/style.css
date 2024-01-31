@@ -236,6 +236,31 @@ fadeOut {
   font-size: 50px !important;
 }
 
+/* Projects */
+#project {
+  justify-content: flex-start; /* Default content alignment for screens wider than 650px */
+}
+
+@media (max-width: 650px) {
+  #project {
+    justify-content: center; /* Center content for screens 650px and narrower */
+  }
+}
+
+/* Modal */
+.splInput {
+  background-color: #2d2d39b3;
+  color: #f5f5f5;
+  transition: all 0.2s ease-in-out; /* Smooth visual transition */
+}
+
+.splInput:focus {
+  background-color: #3333336c; /* Dark background on focus */
+  color: #f5f5f5; /* Light text on focus */
+  outline: none; /* Remove default outline */
+}
+
+
 /* Weather Card Css */
 .container-cust{
   background-color: #2d2d39b3;

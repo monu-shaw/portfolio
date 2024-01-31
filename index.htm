@@ -20,6 +20,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   </head>
   <body onresize="res()" class="bg-c-primary">
     <div
@@ -132,8 +133,7 @@
         </div>
         <!-- SideBar -->
         
-        <div
-          class="position-absolute top-0 end-0 col-12 col-md-9 p-3 bg-c-gray2 overflow-auto hide-scrollbar bg-i"
+        <div  class="position-absolute top-0 end-0 col-12 col-md-9 p-3 bg-c-gray2 overflow-auto hide-scrollbar bg-i"
           style="max-height: 100vh"
         >
           <scrollbar id="my-scrollbar" >
@@ -192,7 +192,7 @@
               <div class="text-light">
                 <h5 class="popLight">My Projects</h5>
                 <div
-                  class="d-flex flex-wrap justify-centent-start project"
+                  class="d-flex flex-wrap project"
                   id="project"
                 >
                   <div class="d-flex justify-content-center mx-auto">
@@ -261,43 +261,45 @@
           </scrollbar>
         </div>
 
-        <div class="position-absolute bottom-0 end-0 pt-5 d-flex flex-row-reverse" style="z-index: 2;">
+        <div class="position-fixed bottom-0 end-0 pb-2 pe-3  d-flex flex-row-reverse" style="z-index: 2;">
           <button class="rounded-circle btn text-warning " style="z-index: 4;" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="grow bi bi-whatsapp fs-2"></i></button>
         </div>
 
         <!-- Weather Card -->
-        <div class="container-cust d-none" id="custCard">
-          <div class="upper" id="upper">
-            <div class="u-left">
-              <div class="weather-stat-logo-container">
-                <img id="weatherIcon" src="./assets/image/weather/sunny.svg" />
+        <div class="position-fixed bottom-0 end-0 mb-5">
+          <div class="container-cust d-none" id="custCard">
+            <div class="upper" id="upper">
+              <div class="u-left">
+                <div class="weather-stat-logo-container">
+                  <img id="weatherIcon" src="./assets/image/weather/sunny.svg" />
+                </div>
+              </div>
+              <div class="u-right">
+                <div class="weather-stat position-relative">
+                  <div class="px-2 py-1 fw-semibold rounded-circle position-absolute text-light border border-1 border-light" style="top: -20px;background-color: #2d2d39b3;" onclick="closeWeather()">X</div>
+                  <ul>
+                    <li id="mainWeather">Sunny</li>
+                    <li><span style="font-size: 40px;" id="temp">20°C</span></li>
+                    <li id="location">Kolkata,West Bengal</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="u-right">
-              <div class="weather-stat position-relative">
-                <div class="px-2 py-1 fw-semibold rounded-circle position-absolute text-light border border-1 border-light" style="top: -20px;background-color: #2d2d39b3;" onclick="closeWeather()">X</div>
+            <div class="lower">
+              <div class="l-left">
                 <ul>
-                  <li id="mainWeather">Sunny</li>
-                  <li><span style="font-size: 40px;" id="temp">20°C</span></li>
-                  <li id="location">Kolkata,West Bengal</li>
+                  <li>Wind</li>
+                  <li>Humidity</li>
+                  <li>Pressure</li>
                 </ul>
               </div>
-            </div>
-          </div>
-          <div class="lower">
-            <div class="l-left">
-              <ul>
-                <li>Wind</li>
-                <li>Humidity</li>
-                <li>Pressure</li>
-              </ul>
-            </div>
-            <div class="l-right">
-              <ul>
-                <li id="speed">100kmph</li>
-                <li id="humidity">40%</li>
-                <li id="pressure">30.33in</li>
-              </ul>
+              <div class="l-right">
+                <ul>
+                  <li id="speed">100kmph</li>
+                  <li id="humidity">40%</li>
+                  <li id="pressure">30.33in</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -310,17 +312,37 @@
     </div>
     <!-- Modals -->
     <div class="modal fade modal-lg" id="contactModal"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
+      <div class="modal-dialog modal-lg modal-dialog-scrollabl">
+        <div class="modal-content bg-c-gray3">
+          <div class="modal-header text-light">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Contact</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn text-light fs-5" data-bs-dismiss="modal" >X</button>
           </div>
-          <div class="modal-body">
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSct1mXUsMkZfzECqe_67easoiUb6JxLSacWqGd9nMu1G0y4jQ/viewform?embedded=true" width="640" style="height:65vh"  frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>            
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <div class="modal-body text-c-grey">
+            <form id="contactForm" class="d-flex gap-3 flex-column">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control splInput" id="name" name="name" required>
+              </div>
+          
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control splInput" id="email" name="email" required>
+              </div>
+          
+              <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" class="form-control splInput" id="phone" name="phone" required>
+              </div>
+          
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control splInput" id="message" name="message" required></textarea>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <button type="submit" class="btn d-block w-100 btn-primary">Send</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -339,6 +361,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.1/smooth-scrollbar.min.js" integrity="sha512-DmxN+h4rvEbHxmkzhxEA1krRvgdzSFhjkcTe2HCZpd5ZnxP9+OWGHB8iMUQhvidmrivCTe3g0hyeMpfTLIwf7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.1/plugins/overscroll.min.js" integrity="sha512-c5xXf0X4/GgcRwau3AiNk3tTIE81A0650rf1EO4l7MmTbEDTU1/4emiXhlRKt689a8iYhi8O0PTYWXTg9+nlcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./assets/js/script.js"></script>
     <script>
       $(document).ready(function () {

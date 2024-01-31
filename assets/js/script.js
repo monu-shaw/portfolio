@@ -139,7 +139,21 @@ const Alert ={
 //Weather 
 window.onload = function() {
   if (navigator.geolocation) {
+    navigator.permissions.query({ name: "geolocation" }).then((result) => {
+      if (result.state !== "granted") {         
+    Toastify({
+      text: "Allow me to give you good experience by allowing your location.",
+      duration: 5000,
+      className:"bg-c-gray3 text-light",
+      style:{
+        background:'#2d2d39b3',
+        borderRadius:'10px'
+      }
+      }).showToast();}
+    });
+   
     navigator.geolocation.getCurrentPosition(showPosition, handleError);
+
   } else {
     // Geolocation is not supported by this browser
     handleError("Geolocation is not supported by this browser.");
@@ -164,8 +178,7 @@ async function showPosition(position) {
     const country = data.sys.country
 
     document.getElementById('custCard').classList.remove('d-none')
-    // Example usage: Displaying weather information
-    console.log(data);
+    
     setInputValueById("mainWeather", mainWeather);
     setInputValueById("temp", temperature+"°C");
     setInputValueById("pressure", pressure+" hPa");
@@ -183,6 +196,20 @@ function handleError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
       Alert.error("User denied the request for Geolocation.");
+      Toastify({
+        text: "Click me to start",
+        duration: 2000,
+        style:{
+          background:'#2d2d39b3',
+          borderRadius:'10px'
+        },
+        onClick: function(){
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, handleError);
+          }
+        }
+        }).showToast();
+
       break;
     case error.POSITION_UNAVAILABLE:
       Alert.error("Location information is unavailable.");
@@ -202,6 +229,7 @@ function changeWeatherIcon(weatherCondition) {
     "clear": "sunny.svg",
       rain: "rainy.svg",
     "few clouds": "cloudy.svg",
+    "clouds": "cloudy.svg",
       snow: "snow.svg",
       thunderstorm: "thunder.svg",
   };
@@ -210,13 +238,14 @@ function changeWeatherIcon(weatherCondition) {
     "clear sky": "#fff8ccb9",
     "clear": "#fff8ccb9",
       rain: "lightgray",
-    "few clouds": "silver",
+    "few clouds": "grey",
+    "clouds": "grey",
       snow: "f5f5f571",
       thunderstorm: "darkgray",
   };
   const background = weatherBackgroundMap[weatherCondition.toLowerCase()] || "lightblue";
 
-  const icon = weatherIconMap[weatherCondition.toLowerCase()] || "unknown.png";
+  const icon = weatherIconMap[weatherCondition.toLowerCase()] || "sunny.svg";
   
   const imgElement = document.getElementById("weatherIcon");
   imgElement.src = "./assets/image/weather/" + icon;
@@ -490,3 +519,34 @@ const countryCode = {
 const closeWeather=()=>{
   document.getElementById('custCard').classList.add('d-none')
 }
+
+//Form Data
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); 
+const name = document.getElementById('name').value.trim();
+const email = document.getElementById('email').value.trim();
+const phone = document.getElementById('phone').value.trim();
+const message = document.getElementById('message').value.trim();
+
+const fdata = {
+  name,
+  email,
+  phone,
+  message
+};
+
+fetch('https://script.google.com/macros/s/AKfycbwhdHCXkgrSc9XXk4mo6qKpgV3PSPKQPzmXS4h4uOIs4zRa4R3_rXwlg78OvMMI3Z2M/exec', {
+  method: 'POST',
+  body: JSON.stringify(fdata)
+})
+.then(response => response.text())
+.then(data => {
+  alert('Your message has been sent successfully!');  
+  form.reset()
+  bootstrap.Modal.getInstance(document.getElementById('contactModal')).hide()
+})
+.catch(error => {
+  alert('An error occurred while sending your message. Please try again later.');
+});
+})

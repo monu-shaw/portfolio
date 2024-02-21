@@ -3,7 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Monu Portfolio</title>
+    <title>Monu Shaw - Full Stack Web Developer Portfolio - Showcasing Dynamic Solutions</title>
+    <meta name="description" content="Explore the portfolio of a seasoned full stack web developer adept at crafting dynamic and innovative digital solutions. Discover a collection of projects demonstrating proficiency in front-end and back-end development, responsive design, and seamless user experiences. Browse through a showcase of cutting-edge websites and applications built to elevate online presence and functionality." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://monu-shaw.github.io/portfolio/" />
+    <meta property="og:title" content="Monu Shaw - Full Stack Web Developer Portfolio - Showcasing Dynamic Solutions" />
+    <meta property="og:description"
+      content="Explore the portfolio of a seasoned full stack web developer adept at crafting dynamic and innovative digital solutions. Discover a collection of projects demonstrating proficiency in front-end and back-end development, responsive design, and seamless user experiences. Browse through a showcase of cutting-edge websites and applications built to elevate online presence and functionality." />
+    <meta property="og:image" content="./assets/image/bgmeta.png" />
+
+    <meta name="google-site-verification" content="8Ilsybp0f3ah6ADmE1Yeb_NS_yYvwRhgYLtDfLhASAk" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -311,36 +322,36 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <!-- Modals -->
-    <div class="modal fade modal-lg" id="contactModal"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-scrollabl">
+    <div class="modal fade" id="contactModal"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollabl">
         <div class="modal-content bg-c-gray3">
           <div class="modal-header text-light">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Contact</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Get In Touch</h1>
             <button type="button" class="btn text-light fs-5" data-bs-dismiss="modal" >X</button>
           </div>
           <div class="modal-body text-c-grey">
             <form id="contactForm" class="d-flex gap-3 flex-column">
-              <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control splInput" id="name" name="name" required>
+              <div class="form-floating">
+                <input type="text" class="form-control splInput" id="name" placeholder="" name="name" required>
+                <label for="name">Name</label>
               </div>
           
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control splInput" id="email" name="email" required>
+              <div class="form-floating">
+                <input type="email" class="form-control splInput" id="email" placeholder="" name="email" required>
+                <label for="email">Email</label>
               </div>
           
-              <div class="form-group">
-                <label for="phone">Phone:</label>
-                <input type="tel" class="form-control splInput" id="phone" name="phone" required>
+              <div class="form-floating">
+                <input type="tel" class="form-control splInput" id="phone" placeholder="" name="phone" required>
+                <label for="phone">Phone</label>
               </div>
           
-              <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea class="form-control splInput" id="message" name="message" required></textarea>
+              <div class="form-floating">
+                <textarea class="form-control splInput" rows="3" id="message" placeholder="" name="message" required style="min-height: 150px;"></textarea>
+                <label for="message">Message</label>
               </div>
-              <div class="col-12 col-md-6 col-lg-3">
-                <button type="submit" class="btn d-block w-100 btn-primary">Send</button>
+              <div class="col-12">
+                <button type="submit" class="btn btn-lg d-block w-100 btn-primary"> Send <span><i class="bi bi-send"></i></span></button>
               </div>
             </form>
           </div>

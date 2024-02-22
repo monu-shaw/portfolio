@@ -264,7 +264,7 @@ fadeOut {
 /* Weather Card Css */
 .container-cust{
   background-color: #2d2d39b3;
-  max-width: 18em;
+  max-width: 17em;
   font-family: sans-serif;
   padding: 0;
   border-radius: 5px;
@@ -319,7 +319,7 @@ fadeOut {
 }
 
 .lower .l-left{
-  flex-basis: 50%;
+  flex-basis: 40%;
   font-weight: 600;
   display:  flex;
   justify-content: start;
@@ -327,7 +327,7 @@ fadeOut {
 }
 
 .lower .l-right{
-  flex-basis: 50%;
+  flex-basis: 60%;
   display:  flex;
   justify-content: end;
   align-items: center;

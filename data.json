@@ -1,6 +1,21 @@
 [
     [
         {
+            "title":"Salesklik (Android App)",
+            "description":"Salesklik is a website builder platform designed to help users create and launch online stores quickly and easily. It caters particularly to beginners who may not have prior experience with web development or coding.",
+            "link": "https://play.google.com/store/apps/details?id=com.salesklik&pli=1"
+        },
+        {
+            "title":"Inshort",
+            "description":"This app provides users with a concise and engaging way to stay informed on current events. It fetches news articles from various sources, summarizes them into easy-to-read snippets, and displays them in a TikTok-like scrolling format.",
+            "link": "https://ourinshort.netlify.app/"
+        },
+        {
+            "title":"ECSBS",
+            "description":"E-COMMERCE STORE BUILDING SYSTEM.  The Platform To Start E-Commerce.Building E-Commerce Store Will Become Easy With This Project Build As my Final Sem Project.",
+            "link": "https://ecsbs.site/"
+        },
+        {
             "title":"Ricedaily.Ga",
             "description":"Ricedaily.Ga is fully functional e-commerce website the modern technology are used during development of it. Make fully well optimized. The most hard part of this project designing UI because its Really Matter",
             "link": "http://shopfy.infinityfreeapp.com/"
@@ -86,12 +101,24 @@
     ],
     [
         {
-            "title":"HTML 85%",
+            "title":"ReactJS 85%",
+            "experience":85
+        },
+        {
+            "title":"NextJS 85%",
             "experience":85
         },
         {
             "title":"Javascript 90%",
             "experience":90
+        },
+        {
+            "title":"Kotlin 80%",
+            "experience":80
+        },
+        {
+            "title":"HTML 85%",
+            "experience":85
         },
         {
             "title":"JQuery 85%",
@@ -104,10 +131,6 @@
         {
             "title":"PHP 80%",
             "experience":80
-        },
-        {
-            "title":"ReactJS 85%",
-            "experience":85
         },
         {
             "title":"Angular 70%",
@@ -124,6 +147,18 @@
         {
             "title":"DSA 60%",
             "experience":60
+        }
+    ],
+    [
+        {
+            "title": "Front-End Developer at SALESKLIK (April 2023 - Present)",
+            "description":"<ul class='fs-6 gap-2'><li>Designed and developed a seller dashboard (ReactJS, Redux Toolkit, Bootstrap) for product management, inventory control, and storefront customization.</li><li>  Built pre-defined storefront themes within the seller dashboard for user flexibility. </li><li> Implemented Next.js with server-side rendering (SSR) to improve SEO and Google search ranking of storefronts.</li></ul>",
+            "slug":"https://salesklik.com/"
+        },
+        {
+            "title": "Web Developer at COMVAL IT Solution Pvt Ltd (January 2023 - March 2023)",
+            "description":"<ul class='fs-6 gap-2'><li>Modernized legacy HTML projects using ReactJS to enhance user experience and functionality. </li><li> Developed user and business dashboards with ReactJS and Redux Toolkit for improved data visualization.</li><li> Streamlined development workflow by deploying projects on a VPS machine for efficient delivery.</li></ul>",
+            "slug":"https://www.comvalitsolutions.com/"
         }
     ]
     

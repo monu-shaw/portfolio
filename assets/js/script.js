@@ -45,24 +45,66 @@ function load() {
     a.style.width = `${a.getAttribute("aria-valuenow")}%`;
   });
 }
-const loadProject = (a) => {
+const loadProject = async (a) => {
   data = a[0];
-  let short = a[0].slice(0,6).reduce(
+  let width = window.innerWidth < 600
+
+  let experice = a[3].reduce(
+    (c, a) =>
+      (c += `
+    <div class="col-11 col-lg-6 p-2 mx-auto">
+    <div class="rounded-3">
+      <div class="bg-c-gray3 p-2 rounded-3 hvr-card">
+        <h6 class="text-light">${a.title}</h6>
+        <div class="text-c-grey c-fs-12 popThin fw-semibold text-capitalize">
+          ${a.description}
+        </div>
+        <a href="${a.slug}" target="_blank" class="text-decoration-none text-c-warning popSemi">View > </a>
+      </div>
+    </div>
+    </div>
+            `),
+    "");
+    (u("experiences").innerHTML = experice)
+
+  let blogList = await fetch("https://monublogapi.netlify.app/.netlify/functions/blog/").then(r=>r.json())
+  let blog = blogList.slice(0,4).reduce(
     (c, a) =>
       (c += `
             <div class="col-11 col-md-4 col-lg-3 p-2">
-              <div class="bg-c-gray3 p-2 rounded-3 hvr-card c-screenBreakPoint">
-                <h6 class="text-light">${a.title}</h6>
-                <p class="text-c-grey c-fs-12 popLight fw-lighter text-capitalize">
-                  ${a.description}
+            <div style="background-image: url('${a.coverImage.url}')" class="rounded-3">
+              <div class="bg-c-gray3 rounded-3 hvr-card p-3" style="backdrop-filter: blur(2px);">
+                <h6 class="text-light line-clamp2 overflow-hidden">${a.title}</h6>
+                <p class="text-white c-fs-12 popLight fw-lighter text-capitalize line-clamp overflow-hidden">
+                  ${a.brief}
                 </p>
-                <a href="${a.link}" target="_blank" class="text-decoration-none text-c-warning popSemi">View > </a>
+                <a href="https://blog.desidevs.site/${a.slug}" target="_blank" class="text-decoration-none text-c-warning popSemi">View > </a>
+              </div>
+              </div>
+              </div>
+            `),
+    "");
+
+  (u("blogs").innerHTML = blog+`<div class="col-10 mx-auto my-2"><div class="col-10 col-md-6 col-lg-4 mx-auto"><a href="https://blog.desidevs.site/" target="_blank"><button class="btn btn-outline-warning rounded-pill w-100 smore">Show More </button></a></div></div>`)
+  let short = a[0].slice(0,width?4:8).reduce(
+    (c, a) =>
+      (c += `
+            <div class="col-11 col-md-4 col-lg-3 p-2">
+              <div class="rounded-3">
+                <div class="bg-c-gray3 p-2 rounded-3 hvr-card">
+                  <h6 class="text-light">${a.title}</h6>
+                  <p class="text-c-grey c-fs-12 popLight fw-lighter text-capitalize">
+                    ${a.description}
+                  </p>
+                  <a href="${a.link}" target="_blank" class="text-decoration-none text-c-warning popSemi">View > </a>
+                </div>
               </div>
               </div>
             `),
     ""
   );
   (u("project").innerHTML = short+`<div class="col-10 mx-auto my-2"><div class="col-10 col-md-6 col-lg-4 mx-auto"><button class="btn btn-outline-warning rounded-pill w-100 smore" onclick="showAll()">Show More </button></div></div>`),
+  
     (u("bio-link").innerHTML = a[1].reduce(
       (c, a) =>
         (c += `

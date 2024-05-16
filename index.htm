@@ -236,7 +236,6 @@
               </div>
               <div class="text-light my-2">
                 <h5 class="popLight">My Blogs</h5>
-                <p>last four latest Blogs</p>
                 <div
                   class="d-flex flex-wrap project"
                   id="blogs"
@@ -409,6 +408,18 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./assets/js/script.js"></script>
     <script>
+      function debounce(func, wait) {
+        let timeout;
+        return function(...args) {
+          const context = this;
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            func.apply(context, args);
+          }, wait);
+        };
+      }
+
+
       $(document).ready(function () {
         setTimeout(() => {
           $("#loader").addClass("fadeOut");
@@ -418,7 +429,9 @@
           fetch("data.json")
             .then((r) => r.json())
             .then((r) => {
-              loadProject(r);
+            loadProject(r)
+              const debouncedResize = debounce(()=>loadProject(r), 300);
+              window.addEventListener("resize",debouncedResize)
             })
             .catch((er) => console.log(`err : ${er}`));
         }, 500);

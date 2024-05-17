@@ -49,7 +49,7 @@ const loadProject = async (a) => {
   data = a[0];
   let width = window.innerWidth < 600
   let w = window.innerWidth < 768
-  
+  if(w){u("main").classList.remove("cstm_scrollbar")}else{u("main").classList.add("cstm_scrollbar")}
   let experice = a[3].reduce(
     (c, a) =>
       (c += `

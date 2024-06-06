@@ -60,7 +60,7 @@ const loadProject = async (a) => {
         <div class="text-c-grey c-fs-12 popThin fw-semibold text-capitalize">
           ${a.description}
         </div>
-        <a href="${a.slug}" target="_blank" class="text-decoration-none text-c-warning popSemi">View > </a>
+        <a href="${a.slug}" target="_blank" class="text-decoration-none text-c-warning popSemi">Visit > </a>
       </div>
     </div>
     </div>
@@ -79,7 +79,7 @@ const loadProject = async (a) => {
                 <p class="text-white c-fs-12 popLight fw-lighter text-capitalize line-clamp overflow-hidden">
                   ${a.brief}
                 </p>
-                <a href="https://blog.desidevs.site/${a.slug}" target="_blank" class="text-decoration-none text-c-warning popSemi">View > </a>
+                <a href="https://blog.desidevs.site/${a.slug}" target="_blank" class="text-decoration-none text-c-warning popSemi">Read More > </a>
               </div>
               </div>
               </div>

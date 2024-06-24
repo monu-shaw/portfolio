@@ -16,6 +16,11 @@
             "link": "https://ecsbs.site/"
         },
         {
+            "title":"PDF Samvad",
+            "link":"https://pdfsamvadapp.onrender.com/",
+            "description":"Pdf Samvad is a collaborative platform for PDFs built with Next.js and Firebase. It seamlessly integrates chat, powered by Gemini AI, allowing you to share, listen to responses, and download chat history. The robust Python FastAPI backend ensures smooth operation, while Render provides effortless deployment."
+        },
+        {
             "title":"Ricedaily.Ga",
             "description":"Ricedaily.Ga is fully functional e-commerce website the modern technology are used during development of it. Make fully well optimized. The most hard part of this project designing UI because its Really Matter",
             "link": "http://shopfy.infinityfreeapp.com/"

@@ -53,19 +53,19 @@
         <!-- SideBar -->
         <div
           id="main"
-          class="d-none d-md-block col-12 col-md-3 p-0 e overflow-auto"
+          class="d-none d-md-block col-12 col-md-3 p-0 e overflow-hidden"
           style="z-index: 1; backdrop-filter: blur(2px); max-height: 100vh;"
         >
           <div
             id="sub-main"
             class="col-8 col-md-12 bg-c-primary e overflow-hidden d-flex flex-column justify-content-around align-items-stretc min-vh-100"
           >
-            <div class="bg-c-primary m-0" >
+            <div class="bg-c-primary m-0" style="height: 30vh;">
               <div
-                class="d-flex justify-centent-center flex-column align-items-center position-relative py-5"
+                class="d-flex justify-content-center flex-column align-items-center position-relative py-2 h-100"
               >
                 <i
-                  class="d-block d-md-none bi bi-three-dots-vertical text-c-grey p-2 position-absolute end-0 e"
+                  class="d-block d-md-none bi bi-three-dots-vertical text-c-grey p-2 position-absolute end-0 top-0 e"
                   id="sClose"
                   onclick="sidebarClose()"
                 ></i>
@@ -83,59 +83,63 @@
                 </div>
                 <div class="text-light text-center">
                   <h5>Monu Shaw</h5>
-                  <p class="text-mute fs-6">
-                    FullStack Web Dev <br />
-                    MERN Developer & <br>
+                  <p class="text-mute fs-6 lh-1">
+                    FullStack & MERN <br />
+                     Developer<br>
                     Android Developer (kotlin)
                   </p>
                 </div>
               </div>
             </div>
             <div
-              class="bg-c-secondary m-0 text-light px-3 py-3 overflow-auto hide-scrollbar popLight"
-              style="max-height: 75vh"
+              class="bg-c-secondary m-0 text-light px-3 py-3 overflow-auto popLight cstm_scrollbar"
+              style="height: calc(100vh - 30vh - 50px);"
             >
-              <div class="d-flex justify-content-between c-fs-12 c-lh-1">
-                <p>Residence:</p>
-                <p>India</p>
-              </div>
-              <div class="d-flex justify-content-between c-fs-12 c-lh-1">
-                <p>City:</p>
-                <p>Kolkata</p>
-              </div>
-              <div class="d-flex justify-content-between c-fs-12 c-lh-1">
-                <p>Age:</p>
-                <p>21</p>
-              </div>
-              <hr class="class-10 mx-auto" />
-              <div id="ex">
-                <!-- <div class="progress my-1"> <div class="progress-bar bg-c-warning text-start popSemi px-2" role="progressbar" aria-label="Example with label" style="width: 00%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">HTML 85% </div> </div> -->
-              </div>
-              <hr class="class-10 mx-auto" />
-              <div>
-                <p class="popThin c-fs-12">
-                  <i class="bi bi-check2 text-c-warning"></i> Bootsrtap,
-                  TailWind, AntDesign
-                </p>
-                <p class="popThin c-fs-12">
-                  <i class="bi bi-check2 text-c-warning"></i> Git, Node.JS
-                </p>
-                <p class="popThin c-fs-12">
-                  <i class="bi bi-check2 text-c-warning"></i> Netlify, Heroku,
-                  Firebase, Vercel
-                </p>
-              </div>
-              <hr class="class-10 mx-auto" />
-              <div>
-                <p class="text-mute">
-                  <a
-                    href="https://docs.google.com/document/d/1zsFGfNXIBrc6pPtNHGXUEhXXcgFRvnJ1cEH1AesYqe8/edit?usp=sharing"
-                    target="_blank"
-                    class="text-decoration-none text-mute"
-                    >Download CV</a
-                  >
-                  <i class="bi bi-file-earmark-arrow-down text-c-warning"></i>
-                </p>
+              <div class="h-100 d-flex justify-content-center flex-column pt-5">
+                <div class="mt-3">
+                  <div class="d-flex justify-content-between c-fs-12 c-lh-1">
+                    <p>Residence:</p>
+                    <p>India</p>
+                  </div>
+                  <div class="d-flex justify-content-between c-fs-12 c-lh-1">
+                    <p>City:</p>
+                    <p>Kolkata</p>
+                  </div>
+                  <div class="d-flex justify-content-between c-fs-12 c-lh-1">
+                    <p>Age:</p>
+                    <p>21</p>
+                  </div>
+                  <hr class="class-10 mx-auto" />
+                  <div id="ex">
+                    <!-- <div class="progress my-1"> <div class="progress-bar bg-c-warning text-start popSemi px-2" role="progressbar" aria-label="Example with label" style="width: 00%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">HTML 85% </div> </div> -->
+                  </div>
+                  <hr class="class-10 mx-auto" />
+                  <div>
+                    <p class="popThin c-fs-12">
+                      <i class="bi bi-check2 text-c-warning"></i> Bootsrtap,
+                      TailWind, AntDesign
+                    </p>
+                    <p class="popThin c-fs-12">
+                      <i class="bi bi-check2 text-c-warning"></i> Git, Node.JS
+                    </p>
+                    <p class="popThin c-fs-12">
+                      <i class="bi bi-check2 text-c-warning"></i> Netlify, Heroku,
+                      Firebase, Vercel
+                    </p>
+                  </div>
+                  <hr class="class-10 mx-auto" />
+                  <div>
+                    <p class="text-mute">
+                      <a
+                        href="https://docs.google.com/document/d/1zsFGfNXIBrc6pPtNHGXUEhXXcgFRvnJ1cEH1AesYqe8/edit?usp=sharing"
+                        target="_blank"
+                        class="text-decoration-none text-mute"
+                        >Download CV</a
+                      >
+                      <i class="bi bi-file-earmark-arrow-down text-c-warning"></i>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
             <div
@@ -149,22 +153,23 @@
         </div>
         <!-- SideBar -->
         
-        <div  class="position-absolute top-0 end-0 col-12 col-md-9 p-3 bg-c-gray2 overflow-auto hide-scrollbar bg-i"
+        <div  class="position-absolute top-0 end-0 col-12 col-md-9 p-1 p-md-3 bg-c-gray2 overflow-auto hide-scrollbar bg-i"
           style="max-height: 100vh"
         >
           <scrollbar id="my-scrollbar" >
             <div class="scroll-content">
-              <div class="d-md-none bg-c-primary py-1">
-                <i
-                  class="bi bi-three-dots-vertical text-c-grey p-2"
-                  id="sOpen"
-                  onclick="sidebar()"
-                ></i>
-              </div>
+              
               <div
                 class="position-relative bg-c-primary d-flex justify-centent-center align-items-center p-1 text-light overflow-hidden"
                 style="height: 40vh"
               >
+              <div class="d-md-none py-1 position-absolute top-0 start-0" style="z-index: 1;">
+                <i
+                  class="bi bi-list fs-4 p-2"
+                  id="sOpen"
+                  onclick="sidebar()"
+                ></i>
+              </div>
                 <div class="bg-c-primary">
                   <img
                     src="./assets/image/bg.jpg"
@@ -268,7 +273,7 @@
                   </div>
                 </div>
                 <div>
-                  <div class="github-card">
+                  <div class="github-card py-4 py-md-1">
                     <h5 class="popLight mt-2">My Github</h5>
                     <div class="row col-12">
                       <div class="col-12 col-md-6">

@@ -389,3 +389,7 @@ fadeOut {
   border-radius: 12px;
   border: 5px solid #ffffff;
 }
+
+#sub-main {
+  transition: all 0.5s ease-in-out;
+}

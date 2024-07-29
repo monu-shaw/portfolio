@@ -8,17 +8,25 @@ let pBar = document.getElementsByClassName("progress-bar"),
 function res() {
   sub.style.width = 767 < window.innerWidth ? `100%` : `80%`;
 }
+
+ui.addEventListener("click",(event)=>{
+  if (ui.contains(event.target) && !sub.contains(event.target)) {
+    sidebarClose()
+  }
+})
 function u(a) {
   return document.getElementById(a);
 }
 function sidebar() {
   (sub.style.width = `0%`),
+  (sub.style.opacity = 0),
     unload(),
     (sOpen.style.transform = `rotate(90deg)`),
     setTimeout(() => {
       ui.classList.remove("d-none"),
         setTimeout(() => {
           (sub.style.width = `80%`),
+          (sub.style.opacity = 1),
             (sClose.style.transform = `rotate(90deg)`),
             load();
         }, 10);

@@ -183,7 +183,7 @@
                   <div class="col-11 col-md-6 col-lg-9 mx-auto">
                     <h2 class="popSemi fs-1 px-2 ps-3 mb-5">
                       Discover My Amazing <br />
-                      Art Space
+                      <span id="type"></span>
                     </h2>
                     <!-- <p id="textin" class="text-c-warning px-2 ps-3 mb-5 popLight">&lt;code&gt; <span class="text-light"> I Build <span id="textIn"></span></span> &lt;code&gt; </p> -->
                   </div>
@@ -411,6 +411,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.1/smooth-scrollbar.min.js" integrity="sha512-DmxN+h4rvEbHxmkzhxEA1krRvgdzSFhjkcTe2HCZpd5ZnxP9+OWGHB8iMUQhvidmrivCTe3g0hyeMpfTLIwf7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.1/plugins/overscroll.min.js" integrity="sha512-c5xXf0X4/GgcRwau3AiNk3tTIE81A0650rf1EO4l7MmTbEDTU1/4emiXhlRKt689a8iYhi8O0PTYWXTg9+nlcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/typeit@8.8.4/dist/index.umd.js"></script>
     <script src="./assets/js/script.js"></script>
     <script>
       function debounce(func, wait) {
@@ -424,8 +425,21 @@
         };
       }
 
-
-      $(document).ready(function () {
+      new TypeIt("#type", {
+        speed: 40,
+        loop: true,
+        waitUntilVisible: true,          
+        })
+        .type('Art Space')
+        .delete()
+        .type('Awesome Projects')
+        .delete()
+        .type('Informative Blogs')
+        .delete()
+        .type('Design Canvas')
+        .delete()
+        .go()
+      $(document).ready(function () {     
         setTimeout(() => {
           $("#loader").addClass("fadeOut");
           $("#loader").addClass("d-none");

@@ -396,3 +396,9 @@ fadeOut {
 .slow-animate{
   transition: all 0.5s ease-in;
 }
+
+@media screen and (min-width: 550px) {
+  .min-c-w{
+    width: 500px;
+  }
+}

@@ -393,3 +393,6 @@ fadeOut {
 #sub-main {
   transition: all 0.5s ease-in-out;
 }
+.slow-animate{
+  transition: all 0.5s ease-in;
+}

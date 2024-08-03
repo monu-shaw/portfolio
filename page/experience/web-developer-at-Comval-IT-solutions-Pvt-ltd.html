@@ -15,25 +15,72 @@
     <meta property="og:url" content="https://monu-shaw.github.io/portfolio">
     <meta property="og:site_name" content="ReactJS Developer in Kolkata">
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
     <title>Monu Shaw | ReactJS Development Kolkata | HTML to React Conversion | Frontend Expert </title>
+    <style>
+        .box{
+
+            background: #fc00ff;
+            background: -webkit-linear-gradient(135deg, #fc00ff , #00dbde);
+            background: linear-gradient(135deg, #fc00ff , #00dbde);
+        }        
+
+        .viewB {
+
+            display: none;
+        }
+
+        .box:hover .viewA {
+        display: none;
+        animation: bounceOut 0.3s ease-out forwards; /* Trigger bounce out animation */
+        }
+
+        .box:hover .viewB {
+        display: block;
+        animation: bounceIn 0.3s ease-in forwards; /* Trigger bounce in animation */
+        }
+
+        /* Bounce animations */
+        @keyframes bounceOut {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(0.9);
+        }
+        100% {
+            transform: scale(0);
+        }
+        }
+
+        @keyframes bounceIn {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+        }
+    </style>
 </head>
-<body>
+<body class="pt-5 bg-dark-subtle">
+    <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" class="box col-10 col-md-9 col-lg-7 mx-auto rounded my-5 p-4 text-light">
     <h1 class="text-center">Web Developer at COMVAL IT Solution Pvt Ltd (January 2023 - March 2023)</h1>
     <div class="mx-auto col-sm-11 col-md-8 col-lg-6">
         <p>
             Jr. Web Developer. His responsibilities included modernizing legacy HTML projects by rebuilding them with ReactJS to enhance user experience and functionality. He also developed user and business dashboards using ReactJS and Redux Toolkit to provide data visualization and insights. Additionally, he streamlined the development workflow by deploying projects on a VPS machine to ensure efficient project delivery.
         </p>
+        <p class="viewA fs-4">Hover To See Effects</p>
+        <a href="https://monu-shaw.github.io/portfolio" class="viewB fs-4 fw-bold text-light btn btn-outline-info">Know more</a>
     </div>
-    <hr />
-    <p>You will be redirected shortly.</p>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            window.location.href = 'https://monu-shaw.github.io/portfolio'; // Replace with your homepage URL
-        });
-    </script>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

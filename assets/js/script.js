@@ -87,7 +87,7 @@ const loadProject = async (a) => {
                 <p class="text-white c-fs-12 popLight fw-lighter text-capitalize line-clamp overflow-hidden">
                   ${a.brief}
                 </p>
-                <a href="https://blog.desidevs.site/${a.slug}" target="_blank" class="text-decoration-none text-c-warning popSemi">Read More > </a>
+                <a href="https://desidevs.hashnode.dev/${a.slug}" target="_blank" class="text-decoration-none text-c-warning popSemi">Read More > </a>
               </div>
               </div>
               </div>

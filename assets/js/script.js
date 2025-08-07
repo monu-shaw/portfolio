@@ -149,7 +149,10 @@ const showAll =()=>{
             `),
     ""
   );
-  u("project").innerHTML = short+`<div class="col-10 col-md-6 col-lg-4 mx-auto my-2"><button class="btn btn-outline-warning rounded-pill w-100 smore" onclick="showLess()">Show Less </button></div>`
+  u("project").innerHTML = short+`<br/>
+  <div class="col-12 mx-auto my-2">
+  <div class="col-10 col-md-6 col-lg-4 mx-auto my-2"><button class="btn btn-outline-warning rounded-pill w-100 smore" onclick="showLess()">Show Less </button></div>
+  </div>`
 }
 const showLess =()=>{
   let short = data.slice(0,6).reduce(
